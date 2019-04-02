@@ -13,7 +13,7 @@
 * "babel-plugin-transform-class-properties": "^6.24.1"
   > 支持class类中的默认属性
 * "eslint": "^5.16.0"
- > 配置.selintrc文件，ESLint 会查找和自动读取它们
+  > 配置.selintrc文件，ESLint 会查找和自动读取它们
 * "webpack": "^4.29.6"
 * "webpack-cli": "^3.3.0"
   > webpack4也需要引进来
