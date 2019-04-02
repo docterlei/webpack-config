@@ -1,4 +1,4 @@
-#### babel配置 
+## babel配置 
 
 * "presets": ["@babel/preset-env", "@babel/preset-react"]
   > 解析es6语法，react语法jsx
