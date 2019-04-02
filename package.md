@@ -1,4 +1,4 @@
-#### 开发环境依赖 devDependencies
+## 开发环境依赖 devDependencies
   
 * "@babel/core": "^7.4.0"
   > babel核心
