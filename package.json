@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --open --config webpack.dev.config.js",
-    "build": "webpack",
+    "dev": "webpack-dev-server --mode development --progress --open --hot --inline --config webpack.dev.config.js",
+    "prod": "webpack --mode production --progress --open --hot --inline --config webpack.prod.config.js",
     "lint": "eslint --ext .js,.jsx src"
   },
   "keywords": [],
@@ -23,6 +23,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
+    "babel-plugin-import": "^1.11.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
