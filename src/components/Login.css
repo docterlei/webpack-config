@@ -1,0 +1,4 @@
+.divtest {color: red}
+div {color: blue}
+:local(.div) {color: #000;}
+:global(.div){color: black}

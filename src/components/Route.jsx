@@ -1,9 +1,8 @@
 import React from 'react';
 import { Input } from 'antd';
-import styles from './Login.css';
-import Route from './Route.jsx';
+import styles from './Route.css';
 
-class Login extends React.Component {
+class Route extends React.Component {
   handleClick = () => {
     console.log(this);
   }
@@ -11,9 +10,7 @@ class Login extends React.Component {
   render() {
     return (
       <div className={styles.divtest}>
-        <Route />
-        <span style={{ color: 'black' }}>哈哈</span>
-        登陆:
+        我是route:
         {' '}
         <Input />
       </div>
@@ -21,4 +18,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default Route;

@@ -21,4 +21,8 @@
 * "jsx-a11y/no-noninteractive-element-interactions": [0],
 * "jsx-a11y/no-static-element-interactions": [0] 
   > 不是button元素时警告  禁用
-  
+* "prefer-destructuring":["error", {"object": false, "array": false}],
+  > 没有使用结构赋值警告 禁用
+* "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+  > 开发依赖改成项目依赖警告 禁用
+

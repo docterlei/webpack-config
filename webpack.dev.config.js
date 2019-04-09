@@ -1,32 +1,48 @@
-var path = require('path');
+// const path = require('path');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const webpack = require('webpack');
 
 module.exports = {
-    mode: 'development',
-    devtool: 'inline-source-map',
+  devtool: 'inline-source-map',
 
-    entry: './src/index.js',
+  entry: './src/index.js',
 
-    output: {
-        filename: 'main.js',
-        path: path.join(__dirname, "build")
-    },
+  output: {
+    filename: 'main.js',
+    path: __dirname,
+  },
 
-    devServer: {
-        contentBase: './build',
-        port: 9000,
-        stats: "errors-only", // 只打印错误
-        overlay: true, //编译出错误的时候在浏览器中全屏显示报错日志
-    },
+  devServer: {
+    contentBase: __dirname,
+    port: 9000,
+    stats: 'errors-only', // 只打印错误
+    overlay: true, // 编译出错误的时候在浏览器中全屏显示报错日志
+  },
 
-    module: {
-        rules: [
-            {
-                test: /(\.js|\.jsx)$/,
-                exclude: /(node_modules)/,
-                use: {
-                  loader: 'babel-loader',
-                }
-            }
-        ]
-    }
-}
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: ['style-loader', { loader: 'css-loader', options: { modules: true, localIdentName: '[name]__[local]--[hash:base64:5]' } }],
+      },
+      {
+        test: /\.css$/,
+        exclude: /src/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /(\.js|\.jsx)$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+    ],
+  },
+
+  plugins: [
+    new BundleAnalyzerPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+  ],
+};
