@@ -5,7 +5,7 @@ const webpack = require('webpack');
 module.exports = {
   devtool: 'inline-source-map',
 
-  entry: './src/index.js',
+  entry: './src/app.js',
 
   output: {
     filename: 'main.js',
@@ -39,6 +39,10 @@ module.exports = {
         },
       },
     ],
+  },
+
+  resolve: {
+    extensions: ['.', '.js', '.jsx'],
   },
 
   plugins: [

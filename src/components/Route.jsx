@@ -1,21 +1,32 @@
 import React from 'react';
-import { Input } from 'antd';
-import styles from './Route.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+// import { Input } from 'antd';
+// import styles from './Route.css';
 
-class Route extends React.Component {
-  handleClick = () => {
-    console.log(this);
-  }
+class RouteD extends React.Component {
+  Index = () => <h2>Home</h2>;
+
+  About = () => <h2>About</h2>;
 
   render() {
     return (
-      <div className={styles.divtest}>
-        我是route:
-        {' '}
-        <Input />
-      </div>
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+              </li>
+            </ul>
+          </nav>
+
+          <Route path="/" exact component={this.Index} />
+          <Route path="/about/" component={this.About} />
+        </div>
+      </Router>
     );
   }
 }
 
-export default Route;
+export default RouteD;

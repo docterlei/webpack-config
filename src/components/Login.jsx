@@ -1,7 +1,7 @@
 import React from 'react';
-import { Input } from 'antd';
-import styles from './Login.css';
-import Route from './Route.jsx';
+// import { Input } from 'antd';
+// import styles from './Login.css';
+import SliderNav from './SliderNav';
 
 class Login extends React.Component {
   handleClick = () => {
@@ -10,13 +10,10 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className={styles.divtest}>
-        <Route />
-        <span style={{ color: 'black' }}>哈哈</span>
-        登陆:
-        {' '}
-        <Input />
-      </div>
+
+      <SliderNav />
+
+
     );
   }
 }
