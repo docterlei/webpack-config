@@ -1,2 +1,11 @@
 /node_modules/*
 /build/*
+
+# 深层嵌套需要这么写 例如：
+# src/*
+# !src/redux
+# src/redux/*
+# !src/reduce/index.js
+# 延续上面的写法可以继续实现深层次的嵌套
+src/components/*
+!src/components/Login.jsx

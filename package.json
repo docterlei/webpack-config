@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --mode development --progress --open --hot --inline --config webpack.dev.config.js",
-    "prod": "webpack --mode production --progress --open --hot --inline --config webpack.prod.config.js",
+    "dev": "webpack-dev-server --mode development --progress --config webpack.dev.config.js",
+    "prod": "webpack --mode production --progress --config webpack.prod.config.js",
     "lint": "eslint --ext .js,.jsx src"
   },
   "keywords": [],

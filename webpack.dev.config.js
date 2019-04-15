@@ -1,5 +1,4 @@
 // const path = require('path');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const webpack = require('webpack');
 
 module.exports = {
@@ -15,6 +14,9 @@ module.exports = {
   devServer: {
     contentBase: __dirname,
     port: 9000,
+    hot: true,
+    inline: true,
+    open: true,
     stats: 'errors-only', // 只打印错误
     overlay: true, // 编译出错误的时候在浏览器中全屏显示报错日志
   },
@@ -46,7 +48,6 @@ module.exports = {
   },
 
   plugins: [
-    new BundleAnalyzerPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
 };

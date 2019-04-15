@@ -1,6 +1,7 @@
 import React from 'react';
 // import { Input } from 'antd';
 // import styles from './Login.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import SliderNav from './SliderNav';
 
 class Login extends React.Component {
@@ -10,8 +11,11 @@ class Login extends React.Component {
 
   render() {
     return (
-
-      <SliderNav />
+      <Router>
+        <div>
+          <SliderNav />
+        </div>
+      </Router>
 
 
     );
