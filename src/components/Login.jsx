@@ -13,6 +13,7 @@ class Login extends React.Component {
     return (
       <Router>
         <div>
+          son
           <SliderNav />
         </div>
       </Router>
