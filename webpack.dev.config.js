@@ -13,7 +13,7 @@ module.exports = {
 
   devServer: {
     contentBase: __dirname,
-    port: 9000,
+    port: 8085,
     hot: true,
     inline: true,
     open: true,
